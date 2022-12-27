@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Navbar, Row, Col } from "react-bootstrap";
+import Cart from './cart components/Cart';
 import Product from './Product';
+
 
 const ProductList = [
     {
@@ -23,21 +25,6 @@ const ProductList = [
         price: 100,
         imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
     },
-    {
-        title: 'Blue Color',
-        price: 100,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-    },
-    {
-        title: 'Blue Color',
-        price: 100,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-    },
-    {
-        title: 'Blue Color',
-        price: 100,
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-    },
 ]
 
 function MainPage() {
@@ -46,6 +33,7 @@ function MainPage() {
 
     return (
         <>
+            <Cart />
             <Container>
                 <Navbar bg="light">
                     <Container>
@@ -65,7 +53,7 @@ function MainPage() {
             </Container>
             <Container>
                 <Row>
-                    <Col className="d-flex justify-content-center align-item-center flex-wrap">
+                    <Col className="d-flex justify-content-center align-items-center flex-wrap">
                         {products}
                     </Col>
                 </Row>
