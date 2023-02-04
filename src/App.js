@@ -1,12 +1,17 @@
 import "./App.css";
-import Mainpage from "../src/components/MainPage";
+import Home from "./Components/Home/Home";
+import { BrowserRouter } from "react-router-dom";
+import Header from "../src/Components/Header/Header";
+import CartProvider from "./Context/CartProvider";
 
 function App() {
   return (
-    <div className="App">
-      <Mainpage />
-      
-    </div>
+    <BrowserRouter>
+      <CartProvider>
+        <Header />
+        <Home />
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
