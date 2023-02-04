@@ -1,0 +1,25 @@
+.home-header,
+h3 {
+  text-align: center;
+}
+.home-header,
+p {
+  font-size: 30px;
+  margin: 5px;
+}
+.home-icon {
+  font-size: 50px;
+  margin: 10px;
+}
+.album-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.album {
+    text-align: left;
+    width: 60%;
+    margin: 10px;
+  border: 1px solid;
+}
