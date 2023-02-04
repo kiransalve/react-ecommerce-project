@@ -1,0 +1,22 @@
+.about-container {
+  text-align: center;
+}
+.about-header {
+  color: rgb(66, 53, 208);
+  margin-bottom: 20px;
+}
+.about-image{
+    margin-bottom: 15px;
+}
+.about-data {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(66, 53, 208);
+}
+.icons{
+    font-size: 50px;
+    color: rgb(66, 53, 208);
+}
+.icon{
+    margin: 13px;
+}

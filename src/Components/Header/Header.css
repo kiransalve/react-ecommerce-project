@@ -2,7 +2,6 @@
   position: sticky;
   top: 0;
   min-height: 80px;
-
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -30,13 +29,12 @@ li {
   color: antiquewhite;
   padding: 0 15px;
 }
-.header_link ul li a:hover{
-    color: rgb(34, 23, 159);
+.active {
+  color: blue;
 }
-.header-cart-icon{
+.header-cart-icon {
   font-size: 25px;
 }
-sup{
+sup {
   font-size: 15px;
 }
-
