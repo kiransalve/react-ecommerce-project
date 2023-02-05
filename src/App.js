@@ -8,17 +8,21 @@ import Cart from "../src/Components/Cart/Cart";
 import About from "../src/Components/About/About";
 import { Route, Routes } from "react-router-dom";
 import data from "../src/Components/ProductData";
+import Movie from "./Components/Movie/Movie";
+
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
         <Header />
+       
         <Routes>
           <Route path="/" element={<Products data={data} />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/movie" element={<Movie />}></Route>
         </Routes>
       </CartProvider>
     </BrowserRouter>

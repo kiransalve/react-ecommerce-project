@@ -13,13 +13,38 @@ p {
 }
 .album-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
+
 .album {
-    text-align: left;
-    width: 60%;
-    margin: 10px;
-  border: 1px solid;
+  display: flex;
+  border-bottom: 1px solid;
+  padding: 10px;
+  width: 70%;
+}
+.album-date {
+  width: 12%;
+}
+.album-city,
+.album-stage {
+  width: 30%;
+}
+
+.album-buy-button {
+  width: 20%;
+  text-align: end;
+}
+.album-buy-button button {
+  background-color: rgb(84, 136, 226);
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  padding: 5px;
+}
+.album-buy-button button:hover{
+  background-color: rgb(44, 105, 211);
+  color: rgb(229, 231, 252);
 }

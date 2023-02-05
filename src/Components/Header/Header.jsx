@@ -24,6 +24,10 @@ const Header = () => {
             <NavLink exact activeClassName="active" to="/about">About</NavLink>
           </li>
           <li>
+            <NavLink exact activeClassName="active" to="/movie">Movie</NavLink>
+            
+          </li>
+          <li>
             <NavLink exact activeClassName="active" to="/cart" className='header-cart-icon'>
               <AiOutlineShoppingCart />
               <sup>{cartItem.length} </sup>

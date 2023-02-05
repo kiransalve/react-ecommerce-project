@@ -11,7 +11,6 @@ const CartProvider = ({ children }) => {
     if (itemIndex === -1) {
       setCartItem([...cartItem, { ...item, quantity: 1 }])
     }
-
     else {
       const updatedCartItem = [...cartItem]
       updatedCartItem[itemIndex].quantity++

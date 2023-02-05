@@ -47,10 +47,10 @@ const Home = () => {
                 {
                     albumData.map((album) => {
                         return <div className='album'>
-                            <li>{album.date}</li>
-                            <li>{album.city}</li>
-                            <li>{album.stage}</li>
-                            <button>Buy Ticket</button>
+                            <span className='album-date'>{album.date}</span>
+                            <span className='album-city'>{album.city}</span>
+                            <span className="album-stage">{album.stage}</span>
+                            <span className='album-buy-button'><button>Buy Ticket</button></span>
                         </div>
                     })
                 }

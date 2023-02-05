@@ -16,7 +16,6 @@ const Products = ({ data }) => {
                         <div className="product-title">{product.title}</div>
                         <div className="product-price">Rs. {product.price}</div>
                         <button className='product-addToCart' onClick={() =>
-
                             addToCart(product)}> Add To cart</button>
                     </div>
                 </>
