@@ -10,7 +10,7 @@ const Header = () => {
     <header className='header' >
       <div>
         <h1>
-          <NavLink exact activeClassName="active" to="/" className='logo'>
+          <NavLink to="/" className='logo'>
             The Generic
           </NavLink>
         </h1>
@@ -18,17 +18,17 @@ const Header = () => {
       <div className="header_link">
         <ul>
           <li>
-            <NavLink exact activeClassName="active" to="/home">Home</NavLink>
+            <NavLink to="/home">Home</NavLink>
           </li>
           <li>
-            <NavLink exact activeClassName="active" to="/about">About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink exact activeClassName="active" to="/movie">Movie</NavLink>
-            
+            <NavLink to="/movie">Movie</NavLink>
+
           </li>
           <li>
-            <NavLink exact activeClassName="active" to="/cart" className='header-cart-icon'>
+            <NavLink to="/cart" className='header-cart-icon'>
               <AiOutlineShoppingCart />
               <sup>{cartItem.length} </sup>
             </NavLink>

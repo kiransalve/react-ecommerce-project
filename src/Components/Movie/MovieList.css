@@ -1,0 +1,19 @@
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(89, 46, 219);
+  font-size: 20px;
+}
+.movie {
+  padding: 30px;
+  margin: 40px;
+  border-radius: 10px;
+  border-bottom: rgb(89, 46, 219) 1px solid;
+  border-left: rgb(89, 46, 219) 1px solid;
+  border-right: rgb(178, 155, 246) 0.1px solid;
+  box-shadow: 1px 5px 5px rgb(178, 155, 246);
+}
+
+.movie-title{
+    font-weight:600;
+}

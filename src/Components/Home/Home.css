@@ -22,7 +22,7 @@ p {
   display: flex;
   border-bottom: 1px solid;
   padding: 10px;
-  width: 70%;
+  width: 65%;
 }
 .album-date {
   width: 12%;
@@ -33,18 +33,17 @@ p {
 }
 
 .album-buy-button {
-  width: 20%;
-  text-align: end;
+  width: 10%;
+  margin-left: 100px;
 }
 .album-buy-button button {
   background-color: rgb(84, 136, 226);
   color: white;
   border-radius: 5px;
-  font-size: 15px;
   border: none;
-  padding: 5px;
+  width: 100%;
 }
-.album-buy-button button:hover{
+.album-buy-button button:hover {
   background-color: rgb(44, 105, 211);
   color: rgb(229, 231, 252);
 }
