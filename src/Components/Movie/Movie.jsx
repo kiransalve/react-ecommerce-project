@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import MovieList from './MovieList';
+import AddMovies from './AddMovies';
 import "./Movie.css"
 
 const Movie = () => {
@@ -28,11 +29,15 @@ const Movie = () => {
         , [])
     return (
         <div>
+            <div className="addmovies">
+                <AddMovies />
+            </div>
             <div className='fetchmovie'>
-                {/* <button onClick={fetchmovie}>Fetch Movies</button> */}
+                {/*<button onClick={fetchmovie}>Fetch Movies</button> */}
             </div>
             {!isLoading && <MovieList movie={movie} error={error} />}
             {isLoading && <p>Loading...</p>}
+
         </div>
     )
 }
