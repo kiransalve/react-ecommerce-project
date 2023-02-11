@@ -15,8 +15,12 @@
   color: azure;
   padding-left: 60px;
 }
+.logo:hover{
+    color: rgb(229, 223, 246);
+}
 .header_link {
   display: flex;
+  flex-wrap: wrap;
 }
 li {
   list-style: none;

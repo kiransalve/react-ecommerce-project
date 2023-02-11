@@ -18,8 +18,8 @@ function App() {
         <Header />
        
         <Routes>
-          <Route path="/" element={<Products data={data} />}></Route>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/product" element={<Products data={data} />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/movie" element={<Movie />}></Route>

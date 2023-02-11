@@ -17,3 +17,8 @@
 .movie-title{
     font-weight:600;
 }
+
+.movie:hover{
+  background-color: rgb(166, 130, 248);
+  color: #fff;
+}
