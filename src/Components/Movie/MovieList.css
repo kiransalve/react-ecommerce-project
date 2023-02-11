@@ -14,11 +14,12 @@
   box-shadow: 1px 5px 5px rgb(178, 155, 246);
 }
 
-.movie-title{
-    font-weight:600;
+.movie-title {
+  font-weight: 600;
 }
 
-.movie:hover{
+.movie:hover {
   background-color: rgb(166, 130, 248);
   color: #fff;
+  transition: 0.1s ease-in;
 }

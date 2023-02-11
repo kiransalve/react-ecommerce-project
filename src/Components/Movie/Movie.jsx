@@ -14,7 +14,7 @@ const Movie = () => {
             setIsLoading(true)
             setError(null)
             try {
-                const response = await fetch("https://swapi.dev/api/films")
+                const response = await fetch("https://react-http-72ccd-default-rtdb.firebaseio.com/movie.json")
                 const data = await response.json()
                 const transformed = data.results
                 setMovies(transformed);
