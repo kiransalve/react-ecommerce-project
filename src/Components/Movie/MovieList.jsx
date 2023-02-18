@@ -1,28 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./MovieList.css"
 
-const MovieList = (props) => {
+const MovieList = ({ movies }) => {
+
+    useEffect(() => {
+        console.log(movies, "in movie list")
+    }, [movies])
     return (
         <div className='movie-container'>
-            {props.movie.map((movie) => {
-                return <div key={movie.episode_id} className="movie">
-                    <div className="movie-title">
-                        {movie.title}
+            {
+                movies.map((movie) => {
+                    return <div key={movie.name} className="movie">
+                        <div className="movie-title">
+                            {movie.title}
+                        </div>
+                        <div className="release-date">
+                            Release Date : {movie.released_date}
+                        </div>
+                        <div className="opening-crowl">
+                            {movie.opeeningText}
+                        </div>
                     </div>
-                    <div className="director">
-                        Director : {movie.director}
-                    </div>
-                    <div className="producer">
-                        Producer : {movie.producer}
-                    </div>
-                    <div className="release-date">
-                        Release Date : {movie.release_date}
-                    </div>
-                    <div className="opening-crowl">
-                        {movie.opening_crawl}
-                    </div>
-                </div>
-            })}
+                }
+                )
+            }
         </div>
     )
 }
