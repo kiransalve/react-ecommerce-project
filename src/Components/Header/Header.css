@@ -1,3 +1,6 @@
+a.active {
+  font-weight: bold;
+}
 .header {
   position: sticky;
   top: 0;
@@ -15,8 +18,8 @@
   color: azure;
   padding-left: 60px;
 }
-.logo:hover{
-    color: rgb(229, 223, 246);
+.logo:hover {
+  color: rgb(229, 223, 246);
 }
 .header_link {
   display: flex;

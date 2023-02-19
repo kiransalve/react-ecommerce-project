@@ -2,6 +2,7 @@ import React from 'react'
 import "./Product.css"
 import { useContext } from "react"
 import { CartContext } from "../../Context/CartProvider"
+import { Link } from "react-router-dom"
 
 const Products = ({ data }) => {
 
@@ -10,7 +11,7 @@ const Products = ({ data }) => {
     return (
         <div className='products'>
             {data.productsArr.map((product) => {
-                return <>
+                return <Link to={`/product/${product.id}`}>
                     <div className='product-container'>
                         <img src={product.imageUrl} alt={product.title} className="product-image" />
                         <div className="product-title">{product.title}</div>
@@ -18,7 +19,7 @@ const Products = ({ data }) => {
                         <button className='product-addToCart' onClick={() =>
                             addToCart(product)}> Add To cart</button>
                     </div>
-                </>
+                </Link>
             })}
         </div >
     )

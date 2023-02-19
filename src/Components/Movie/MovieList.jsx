@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "./MovieList.css"
 
 const MovieList = ({ movies }) => {
-
-    useEffect(() => {
-        console.log(movies, "in movie list")
-    }, [movies])
     return (
         <div className='movie-container'>
             {
