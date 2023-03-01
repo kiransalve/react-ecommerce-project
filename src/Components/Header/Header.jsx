@@ -47,7 +47,7 @@ const Header = () => {
             <NavLink to='/profile'>Profile</NavLink>
           </li>
           <li>
-            <button>Logout</button>
+            <NavLink to='/auth'>Logout</NavLink>
           </li>
 
 

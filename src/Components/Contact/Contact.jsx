@@ -34,7 +34,7 @@ const Contact = () => {
                     <div className="name">
                         <label htmlFor="name">Name :</label>
                         <input type="text" value={names} onChange={(e) => setNames(e.target.value)} />
-                    </div>
+                      </div>
                     <div className="phone">
                         <label htmlFor="phone">Phone No.:</label>
                         <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
@@ -44,7 +44,7 @@ const Contact = () => {
                         <label htmlFor="email">Email ID :</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
-                    <button type="submit">Submit</button>
+                    <button className ="contact-button" type="submit">Submit</button>
                 </div>
             </form>
         </div>
