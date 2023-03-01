@@ -1,11 +1,13 @@
 .home-header,
 h3 {
   text-align: center;
+  color: rgb(127, 67, 211);
 }
 .home-header,
 p {
   font-size: 30px;
   margin: 5px;
+  color: rgb(127, 67, 211);
 }
 .home-icon {
   font-size: 50px;
@@ -18,12 +20,17 @@ p {
   justify-content: center;
   color: rgb(127, 67, 211);
 }
-
+.album:nth-child(1) {
+  background-color: rgb(84, 136, 226);
+  font-size: 20px;
+  color: #fff;
+}
 .album {
   display: flex;
   border-bottom: 1px solid;
+  align-items: center;
   padding: 10px;
-  width: 65%;
+  width: 60%;
 }
 .album-date {
   width: 12%;

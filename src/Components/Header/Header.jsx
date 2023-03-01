@@ -29,15 +29,28 @@ const Header = () => {
           <li>
             <NavLink to="/contact" activeClassName="active">Contact Us</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/movie" activeClassName="active">Movie</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/cart" className='header-cart-icon'>
               <AiOutlineShoppingCart />
               <sup>{cartItem.length} </sup>
             </NavLink>
           </li>
+
+          {/* Auth */}
+          <li>
+            <NavLink to='/auth'>Login</NavLink>
+          </li>
+          <li>
+            <NavLink to='/profile'>Profile</NavLink>
+          </li>
+          <li>
+            <button>Logout</button>
+          </li>
+
+
         </ul>
       </div>
     </header>

@@ -7,10 +7,11 @@ const ProductDetail = () => {
     const { id } = useParams();
     // converting to a number using toString() before comparing it with the product id.
     const product = data.productsArr.find((p) => p.id.toString() === id);
-    console.log(product)
+    
     if (!product) {
         return <div>Product not found</div>
     }
+
     return (
         <Container>
             <Row>

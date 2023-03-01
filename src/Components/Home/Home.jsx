@@ -44,6 +44,12 @@ const Home = () => {
         <div>
             <h3>Tours</h3>
             <ul className='album-container'>
+                <div className='album'>
+                    <span className='album-date'>Date</span>
+                    <span className='album-city'>City</span>
+                    <span className="album-stage">Stage</span>
+                    <span className=''></span>
+                </div>
                 {
                     albumData.map((album) => {
                         return <div className='album'>
