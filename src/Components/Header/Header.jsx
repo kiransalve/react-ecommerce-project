@@ -3,8 +3,12 @@ import { NavLink } from "react-router-dom"
 import "./Header.css"
 import { CartContext } from '../../Context/CartProvider'
 import { AiOutlineShoppingCart } from "react-icons/ai"
+import AuthContext from '../../store/auth-context'
 
 const Header = () => {
+  const authCtx = useContext(AuthContext)
+  const isLoggedIn = authCtx.isLoggedIn;
+
   const { cartItem } = useContext(CartContext)
   return (
     <header className='header' >
@@ -40,17 +44,22 @@ const Header = () => {
           </li>
 
           {/* Auth */}
-          <li>
-            <NavLink to='/auth'>Login</NavLink>
-          </li>
-          <li>
-            <NavLink to='/profile'>Profile</NavLink>
-          </li>
-          <li>
-            <NavLink to='/auth'>Logout</NavLink>
-          </li>
 
-
+          {!isLoggedIn && (
+            <li>
+              <NavLink to='/auth'>Login</NavLink>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li>
+              <NavLink to='/profile'>Profile</NavLink>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li>
+              <NavLink>Logout</NavLink>
+            </li>
+          )}
         </ul>
       </div>
     </header>

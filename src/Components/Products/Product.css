@@ -8,12 +8,13 @@
 }
 .product-container {
   padding: 20px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
   box-shadow: 5px 2px 5px rgb(66, 53, 208);
   border: 1px solid;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 .product-image {
