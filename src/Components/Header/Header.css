@@ -42,3 +42,11 @@ li {
 sup {
   font-size: 15px;
 }
+.btn-logout {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: antiquewhite;
+  background-color: #6c5df3;
+  border: none;
+  padding: 0 15px;
+}

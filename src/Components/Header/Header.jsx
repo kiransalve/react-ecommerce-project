@@ -9,7 +9,12 @@ const Header = () => {
   const authCtx = useContext(AuthContext)
   const isLoggedIn = authCtx.isLoggedIn;
 
+  const logoutHandlar = () => {
+    authCtx.logout()
+  }
+
   const { cartItem } = useContext(CartContext)
+
   return (
     <header className='header' >
       <div>
@@ -57,7 +62,7 @@ const Header = () => {
           )}
           {isLoggedIn && (
             <li>
-              <NavLink>Logout</NavLink>
+              <button className='btn-logout' onClick={logoutHandlar}>Logout</button>
             </li>
           )}
         </ul>
