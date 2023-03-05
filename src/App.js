@@ -1,4 +1,6 @@
 import "./App.css";
+import { useContext } from "react";
+import AuthContext from "./store/auth-context";
 import Home from "./Components/Home/Home";
 import { BrowserRouter } from "react-router-dom";
 import Header from "../src/Components/Header/Header";
@@ -15,24 +17,28 @@ import AuthPage from "./pages/AuthPage";
 import UserProfile from "./Components/Profile/UserProfile";
 
 function App() {
+  const authCtx = useContext(AuthContext);
   return (
     <BrowserRouter>
       <CartProvider>
         <Header />
+
         <Routes>
           <Route
             exact
             path="/product"
             element={<Products data={data} />}
           ></Route>
-          <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/product/:id" element={<ProductDetail />}></Route>
 
           <Route path="/auth" element={<AuthPage />}></Route>
-          <Route path="/profile" element={<UserProfile />}></Route>
+          {authCtx.isLoggedIn && (
+            <Route path="/profile" element={<UserProfile />}></Route>
+          )}
         </Routes>
       </CartProvider>
     </BrowserRouter>
