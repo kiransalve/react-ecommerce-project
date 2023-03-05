@@ -29,9 +29,11 @@ const Header = () => {
           <li>
             <NavLink to="/" activeClassName="active">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/product" activeClassName="active">Store</NavLink>
-          </li>
+          {isLoggedIn && (
+            <li>
+              <NavLink to="/product" activeClassName="active">Store</NavLink>
+            </li>)
+          }
           <li>
             <NavLink to="/about" activeClassName="active">About</NavLink>
           </li>
@@ -41,12 +43,12 @@ const Header = () => {
           {/* <li>
             <NavLink to="/movie" activeClassName="active">Movie</NavLink>
           </li> */}
-          <li>
+          {isLoggedIn && (<li>
             <NavLink to="/cart" className='header-cart-icon'>
               <AiOutlineShoppingCart />
               <sup>{cartItem.length} </sup>
             </NavLink>
-          </li>
+          </li>)}
 
           {/* Auth */}
 
