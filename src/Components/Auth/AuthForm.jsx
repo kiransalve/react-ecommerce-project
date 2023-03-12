@@ -47,14 +47,12 @@ const AuthForm = () => {
       } else {
         return res.json().then((data) => {
           let errorMessage = "Authentication Failed";
-          // if (data && data.error && data.error.message) {
-          //   errorMessage = data.error.message;
-          // }
           throw new Error(errorMessage)
         });
       }
     }).then(data => {
       authCtx.login(data.idToken)
+      authCtx.logedInEmail(data.email)
       navigate("/product")
     }).catch(err => {
       alert(err.message)
@@ -82,7 +80,7 @@ const AuthForm = () => {
           {!isLoading && (
             <button>{isLogin ? "Login" : "Create Account"}</button>
           )}
-          {isLoading && <p>Sending Request...</p>}
+          {isLoading && (<div>Sending Request...</div>)}
           <button
             type="button"
             className={classes.toggle}

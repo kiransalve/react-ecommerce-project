@@ -5,7 +5,18 @@ const Contact = () => {
     const [names, setNames] = useState("")
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
+    const [submitted, setSubmitted] = useState(false)
 
+
+    const nameChangeHandlar = (e) => {
+        setNames(e.target.value)
+    }
+    const phoneChangeHandlar = (e) => {
+        setPhone(e.target.value)
+    }
+    const emailChangeHandlar = (e) => {
+        setEmail(e.target.value)
+    }
     const handleContactSubmit = async (event) => {
         event.preventDefault();
         try {
@@ -20,33 +31,44 @@ const Contact = () => {
                     }
                 }
             )
+            setNames("");
+            setPhone("");
+            setEmail("");
+            setSubmitted(true)
         } catch (error) {
             console.error(error)
         }
     }
+
+
     return (
+
         <div className='contact-container'>
             <div className="contact-header">
                 <p>Contact Us</p>
             </div>
-            <form action="#" method="post" onSubmit={handleContactSubmit}>
+            {submitted ? (
+                <div className="thanks-box">
+                    Thanks for contacting us..!
+                </div>
+            ) : (<form action="#" method="post" onSubmit={handleContactSubmit}>
                 <div className="form-container">
                     <div className="name">
                         <label htmlFor="name">Name :</label>
-                        <input type="text" value={names} onChange={(e) => setNames(e.target.value)} />
-                      </div>
+                        <input type="text" value={names} onChange={nameChangeHandlar} />
+                    </div>
                     <div className="phone">
                         <label htmlFor="phone">Phone No.:</label>
-                        <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="number" value={phone} onChange={phoneChangeHandlar} />
                     </div>
-
                     <div className="email">
                         <label htmlFor="email">Email ID :</label>
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" value={email} onChange={emailChangeHandlar} />
                     </div>
-                    <button className ="contact-button" type="submit">Submit</button>
+                    <button className="contact-button" type="submit">Submit</button>
                 </div>
-            </form>
+            </form>)}
+
         </div>
     )
 }

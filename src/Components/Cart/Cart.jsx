@@ -4,9 +4,9 @@ import "./Cart.css"
 
 const Cart = () => {
   const { cartItem } = useContext(CartContext)
-  console.log(cartItem)
+
   return (
-    <div>
+    <div className="Container">
       <h1 className="cart-header">Cart</h1>
       <ul className="cart">
         {cartItem.map((item, index) => (
