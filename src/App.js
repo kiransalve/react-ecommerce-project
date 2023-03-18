@@ -24,6 +24,24 @@ function App() {
         <Header />
 
         <Routes>
+          {/* Home page */}
+          <Route path="/" element={<Home />}></Route>
+          {/* About page */}
+          <Route path="/about" element={<About />}></Route>
+          {/* Contact page */}
+          <Route path="/contact" element={<Contact />}></Route>
+          {/* Login page */}
+          <Route path="/auth" element={<AuthPage />}></Route>
+
+          {/* <Route path="/movie" element={<Movie />}></Route> */}
+
+          {/* if any other url than route and user not logged in, send user to login page*/}
+          {!authCtx.isLoggedIn && (
+            <Route path="*" element={<AuthPage />}></Route>
+          )}
+
+          {/* if user logged in then only show these page */}
+          {/* Product Page */}
           {authCtx.isLoggedIn && (
             <Route
               exact
@@ -32,20 +50,12 @@ function App() {
             ></Route>
           )}
 
-          <Route path="/" element={<Home />}></Route>
-          {!authCtx.isLoggedIn && (
-            <Route path="*" element={<AuthPage />}></Route>
-          )}
           {authCtx.isLoggedIn && (
             <Route path="/cart" element={<Cart />}></Route>
           )}
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
           {authCtx.isLoggedIn && (
             <Route path="/product/:id" element={<ProductDetail />}></Route>
           )}
-
-          <Route path="/auth" element={<AuthPage />}></Route>
           {authCtx.isLoggedIn && (
             <Route path="/profile" element={<UserProfile />}></Route>
           )}
